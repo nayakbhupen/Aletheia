@@ -1,0 +1,74 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/aletheia-core",
+    "crates/aletheia-confound",
+    "crates/aletheia-grading",
+    "crates/aletheia-passage",
+    "crates/aletheia-taxonomy",
+    "crates/aletheia-epistemic",
+    "crates/aletheia-domains",
+    "crates/aletheia-agentic",
+    "crates/aletheia-models",
+    "crates/aletheia-metrics",
+    "crates/aletheia-report",
+    "crates/aletheia-builder",
+    "crates/aletheia-cli",
+    "crates/aletheia-py",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Bhupen Nayak <bhupennayak@icloud.com>"]
+license = "MIT"
+repository = "https://github.com/nayakbhupen/Alethia"
+description = "The world's definitive hallucination benchmark — 25K items, 9 pillars, Rust-native"
+
+[workspace.dependencies]
+# Core serialization & error handling
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0"
+anyhow = "1.0"
+tokio = { version = "1.38", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+rayon = "1.10"
+
+# CLI & UX
+clap = { version = "4.5", features = ["derive"] }
+indicatif = "0.17"
+comfy-table = "7.1"
+colored = "3.0"
+
+# Networking & HTTP
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+
+# Data persistence & utilities
+rusqlite = { version = "0.32", features = ["bundled"] }
+csv = "1.3"
+uuid = { version = "1.10", features = ["v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+rand = "0.8"
+regex = "1.11"
+
+# Internal workspace crates
+aletheia-core = { path = "crates/aletheia-core" }
+aletheia-confound = { path = "crates/aletheia-confound" }
+aletheia-grading = { path = "crates/aletheia-grading" }
+aletheia-passage = { path = "crates/aletheia-passage" }
+aletheia-taxonomy = { path = "crates/aletheia-taxonomy" }
+aletheia-epistemic = { path = "crates/aletheia-epistemic" }
+aletheia-domains = { path = "crates/aletheia-domains" }
+aletheia-agentic = { path = "crates/aletheia-agentic" }
+aletheia-models = { path = "crates/aletheia-models" }
+aletheia-metrics = { path = "crates/aletheia-metrics" }
+aletheia-report = { path = "crates/aletheia-report" }
+aletheia-builder = { path = "crates/aletheia-builder" }
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = true

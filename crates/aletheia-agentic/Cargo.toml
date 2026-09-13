@@ -1,0 +1,14 @@
+[package]
+name = "aletheia-agentic"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "4 agentic adversarial dimensions: tool-return, semantic drift, parametric conflict, and sycophancy"
+
+[dependencies]
+aletheia-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+rand = { workspace = true }

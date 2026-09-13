@@ -1,0 +1,39 @@
+[package]
+name = "aletheia-cli"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Command-line interface and evaluation runner for Aletheia v∞"
+
+[[bin]]
+name = "aletheia"
+path = "src/main.rs"
+
+[dependencies]
+aletheia-core = { workspace = true }
+aletheia-confound = { workspace = true }
+aletheia-grading = { workspace = true }
+aletheia-passage = { workspace = true }
+aletheia-taxonomy = { workspace = true }
+aletheia-epistemic = { workspace = true }
+aletheia-domains = { workspace = true }
+aletheia-agentic = { workspace = true }
+aletheia-models = { workspace = true }
+aletheia-metrics = { workspace = true }
+aletheia-report = { workspace = true }
+aletheia-builder = { workspace = true }
+
+clap = { workspace = true }
+tokio = { workspace = true }
+rayon = { workspace = true }
+indicatif = { workspace = true }
+colored = { workspace = true }
+comfy-table = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+anyhow = { workspace = true }
+chrono = { workspace = true }
+rand = { workspace = true }

@@ -1,0 +1,19 @@
+[package]
+name = "aletheia-grading"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Deterministic 3-tier grading cascade with Wikidata QID, numeric/date normalizers, and frozen NLI"
+
+[dependencies]
+aletheia-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+rusqlite = { workspace = true }
+reqwest = { workspace = true }
+regex = { workspace = true }
+chrono = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }

@@ -1,0 +1,25 @@
+[package]
+name = "aletheia-py"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Official Python bindings for Aletheia: Sub-Microsecond Epistemic Hallucination Benchmark & Engine"
+
+[lib]
+name = "aletheia"
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["extension-module"]
+extension-module = ["pyo3/extension-module"]
+
+[dependencies]
+pyo3 = { version = "0.23.5" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+aletheia-core = { workspace = true }
+aletheia-epistemic = { workspace = true }
+aletheia-grading = { workspace = true }
+aletheia-passage = { workspace = true }

@@ -1,0 +1,16 @@
+[package]
+name = "aletheia-metrics"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Aletheia Truth Tensor and statistical metric aggregation engine"
+
+[dependencies]
+aletheia-core = { workspace = true }
+aletheia-epistemic = { workspace = true }
+aletheia-grading = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+rand = { workspace = true }

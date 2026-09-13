@@ -1,0 +1,14 @@
+[package]
+name = "aletheia-epistemic"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Native Phase-Space Resonance R_sc epistemic uncertainty engine and calibration metrics for Aletheia"
+
+[dependencies]
+aletheia-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+rand = { workspace = true }

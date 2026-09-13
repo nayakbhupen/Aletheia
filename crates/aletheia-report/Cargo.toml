@@ -1,0 +1,16 @@
+[package]
+name = "aletheia-report"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Terminal leaderboard, LaTeX tables, Markdown, and SVG charts for Aletheia"
+
+[dependencies]
+aletheia-core = { workspace = true }
+aletheia-metrics = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+comfy-table = { workspace = true }
+colored = { workspace = true }

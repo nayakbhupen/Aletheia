@@ -1,0 +1,23 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "aletheia"
+version = "0.1.0"
+description = "Sub-Microsecond Epistemic Hallucination Benchmark & Audit Engine"
+authors = [{ name = "Bhupen Nayak", email = "bhupennayak@icloud.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["hallucination", "llm", "benchmark", "epistemic", "rust", "eval"]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[tool.maturin]
+manifest-path = "crates/aletheia-py/Cargo.toml"
+module-name = "aletheia"

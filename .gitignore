@@ -1,0 +1,54 @@
+# Build artifacts
+/target/
+target/
+*.so
+*.dylib
+*.whl
+__pycache__/
+*.egg-info/
+.pytest_cache/
+
+# Proprietary Master Datasets (Keep gold test sets strictly private & local)
+data/*.json
+!data/aletheia_dev_1k.json
+data/*.parquet
+data/*.csv
+data/*.jsonl
+
+# Credentials, Secrets & Keys
+.env
+.env.*
+*.pem
+*.key
+*.token
+credentials.json
+secrets.json
+
+# Database & Cache files
+*.db
+*.sqlite
+*.sqlite3
+
+# Evaluation Receipts & Benchmark Outputs
+reports/
+results/
+evaluation_receipts*.json
+*.receipts.json
+
+# Logs & scratch files
+*.log
+scratch/
+.system_generated/
+
+# OS & Editor generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

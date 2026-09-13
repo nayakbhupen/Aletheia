@@ -1,0 +1,15 @@
+[package]
+name = "aletheia-taxonomy"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "5-modality hallucination perturbation generators for Aletheia"
+
+[dependencies]
+aletheia-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+rand = { workspace = true }
+regex = { workspace = true }

@@ -1,0 +1,16 @@
+[package]
+name = "aletheia-confound"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Syntactic isomorphism, length matching, and JSD/AUROC confound gates for Aletheia"
+
+[dependencies]
+aletheia-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+regex = { workspace = true }
+rand = { workspace = true }
+tracing = { workspace = true }

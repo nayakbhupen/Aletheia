@@ -1,0 +1,15 @@
+[package]
+name = "aletheia-domains"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Multi-domain datasets, seed generators, and multilingual corpus for Aletheia"
+
+[dependencies]
+aletheia-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+rand = { workspace = true }
+regex = { workspace = true }
